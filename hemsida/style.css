@@ -1,0 +1,573 @@
+body{background-color:black;
+
+}
+.flexbox-container {
+    display: flex;
+    align-items: stretch;
+    
+}
+/*Det här är min header, som jag gjorde röd, men 5 blocks på heighten 60px, sen gjorde jag en border som var svart mellan dem*/
+.flexbox-item {
+    width: 500px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: -9px;
+    margin-right: -8px;
+    border: 3px solid rgb(5, 5, 5);
+    background-color:rgb(238, 49, 49);
+    flex-direction: row;
+    flex-wrap: wrap;
+}   
+/*Här ändrar jag text färg font och skugga för alla texter som är h3, jag använde mig av margin top för att för flytt texten neråt till den postion jag tyckte passa bäst*/
+h3{
+    text-align: center;
+    color:white;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 5px 5px 15px #000;
+    margin-top: 14px;
+    font-size: 20px;
+}
+/*tog bort unlinen på alla länkar till andra sidor. */
+a {
+    text-decoration: none;
+}
+/*Här gjorde jag en box för logan på widthen 365 och heighten 137, som hade en borde på 5px som var röd,
+ sen satte jag en margin på 50px för att animation ska ha plats att röra sig
+ Sedan flyttade jag bilden centrerat med hjälp av margin left
+ animation duration tog jag på 2s så att den inte skulle bli för långsamm men inte för snabb heller
+ animation iteration count infite är satt för att den aldrig skall sluta göra sin animation
+ postion relative för att den ska starta i mitten och utgå där när animation loopar*/
+.flexbox-logo {
+    width: 365px;
+    height: 137px;
+    margin: 50px;
+    background-color:rgb(0, 0, 0);
+    border: 5px solid red;
+    margin-left: 450px;
+    animation-duration: 2s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+    animation-timing-function: linear;
+}
+/*Här byter jag bara färgerna för varje rörelse logan göra, och så sätter jag kodinater på vart logan skall åka, t.ex. left:0px; top 100px;
+vilket betyder att den kommer placera sig 100 pixlar upp från sin utgångs punkt och 0px åt vänster
+10% och 20% och följande betyder när 20% av animation är gjorde gör det här. */
+@keyframes logo{
+    10% {border-color: darkred;left: 0px; top:0px;}
+    20% {border-color: red;left: 50px; top: 0px;}
+    30% {border-color: darkorange;left: 50px; top: 50px;}
+    40% {border-color: orange;left: 0px; top: 50px;}
+    50% {border-color: yellow;left: -50px; top: 50px;}
+    60%{border-color: greenyellow;left: -50px; top: 0px;}
+    70%{border-color: green;left: -50px; top: -50px;}
+    80%{border-color: lightskyblue;left: 0px; top: -50px;}
+    90%{border-color: blue;left: 50px; top: -50px;}
+    100%{border-color: darkslateblue;left: 50px; top: 0px;}
+
+}
+/*här använda mig av justify-content:center för att centrera texten*/
+.flexbox-container_b {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.flexbox-item_b {
+    width: 800px;
+    height: 200px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+
+}   
+
+h2{
+text-align: center;
+color:rgb(255, 255, 255);
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-shadow: 2px 2px 6px #000;
+margin-top: 20px;
+font-size: 22px;
+}
+
+h6{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 6px #000;
+    margin-top: 20px;
+    }   
+    h4{
+        text-align: center;
+        color:rgb(255, 255, 255);
+        font-family:'Times New Roman', Times, serif;
+        text-shadow: 2px 2px 6px #000;
+        margin-top: 20px;
+        }
+.flexbox-container_c {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_c {
+    width: 1300px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: -30px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+}   
+
+
+.flexbox-container_d {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_d {
+    width: 1300px;
+    height: 49px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+}   
+
+.flexbox-item_d_1{
+    flex-grow: 0;
+    min-height: 25px;
+    margin-left: 1px;
+    margin-top: -1px;
+}
+.flexbox-container_e {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_e {
+    width: 1300px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+}   
+
+.flexbox-container_f {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_f {
+    width: 1300px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+}   
+
+.flexbox-container_g {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_g {
+    width: 1300px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+}   
+
+.flexbox-container_h {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_h {
+    width: 600px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: -50px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    border: 3px rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color:rgb(238, 49, 49);
+}   
+
+
+h1{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 6px #000;
+    margin-top: 10px;
+    }
+.flexbox-container_j{
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px   ;
+}
+.flexbox-item_j{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-grow: 0px;
+    flex-basis: 10px;
+    height: 100px;
+    flex: 32%;
+    margin-bottom: 2%;
+    margin-left: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+
+/*anledning till jag använda mig margintops på dessa två items är pågrund av att bilderna har olika storlekar, men eftersmo det är utklippta bilder så betyder det längden mellan toppen av bilden och till toppen av cola burken på bilden är längre vilket betyder att bilderna blir ojämna. Därför har jag inget aannat val än att använda mig av margin*/
+.flexbox-item_j_1{
+    margin-top: 40px;
+
+}
+
+.flexbox-item_j_3{
+    margin-top: 65px;
+
+}
+.flexbox-container_k {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_k {
+    width: 642px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+}
+.flexbox-container_o {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_o {
+    width: 360px;   
+    height: 450px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    border: 3px solid rgb(238, 49, 49);
+    background-color:rgb(8, 8, 8);
+}
+
+.flexbox-container_p {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_p {
+    width: 355px;
+    height: 450px;
+    margin-left: -8px;
+    margin-top: -70px;
+    margin-right: -8px;
+    border: 3px solid rgb(238, 49, 49);
+    background-color:rgb(0, 0, 0);
+}
+
+.flexbox-container_q {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_q {
+    width: 450px;
+    height: 450px;
+    margin-left: -8px;
+    margin-top: -70px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(0, 0, 0);
+}
+
+.flexbox-container_z {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_z {
+    width: 450px;
+    height: 70px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+    border-radius: 5px;
+}
+
+.flexbox-container_x {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_x {
+    width: 370px;
+    height: 70px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+    border-radius: 5px;
+}
+.flexbox-item_x_1{
+    flex-grow: 0;
+    min-height: 25px;
+}
+.flexbox-container_å {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_å {
+    width: 370px;
+    height: 70px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+    border-radius: 5px;
+}
+.flexbox-item_å_1{
+    flex-grow: 0;
+    min-height: 25px;
+}
+.flexbox-container_ä {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.flexbox-item_ä {
+    width: 950px;
+    height: 500px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+}
+.flexbox-item_ä_1{
+    display: flex;
+    justify-content: flex-end;
+}
+.flexbox-item_ä_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-container_ö {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.flexbox-item_ö {
+    width: 620px;
+    height: 1px;
+    margin-left: -8px;
+    margin-top: -380px;
+    margin-right: -8px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+    font-size: 20px;
+}
+.flexbox-item_ö_1{
+    display: flex;
+    justify-content: flex-end;
+}
+.flexbox-container_u {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.flexbox-item_u {
+    width: 250px;
+    height: 60px;
+    margin-left: 280px;
+    margin-top: -270px;
+    margin-right: -8px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color:rgb(212, 27, 27);
+    border-radius: 5px;
+    display: flex;
+}
+.flexbox-item_u_1{
+    display: flex;
+    justify-content: center;
+}
+* {
+    box-sizing: border-box;
+  }
+  .container {
+    position: relative; 
+  }
+  .mySlides {
+    display: none;
+    margin: auto;
+    margin-left: 38%;
+  }
+  
+
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+  .prev:hover,.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  .demo {
+    opacity: 0.6;
+  } 
+  .demo:hover {
+    opacity: 1;
+  }
+.flexbox-container_r {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flexbox-item_r_1 {
+    width: 500px;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-right: 0px;
+    border: 3px solid red;
+    background-color:rgb(138,33,33);  
+    border-radius: 5px;
+}
+.flexbox-item_r_2{
+    width: 200px;
+    height: 270px;
+    margin-left: 170px;
+    margin-top: 0px;
+    margin-right: 0px;
+    border: 3px solid red;
+    background-color:rgb(138, 33, 33);  
+    border-radius: 5px;
+}
+h5{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 6px #000;
+    margin-top: 20px;
+    font-size: 16px;
+    }
+    .flexbox-container_l{
+        display: flex;
+        flex-wrap: wrap;
+        height: 320px;
+        background-color: rgb(0, 0, 0);
+    }
+    .flexbox-item_l{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        flex-grow: 0px;
+        flex-basis: 10px;
+        height: 100px;
+        flex: 32%;
+        margin-bottom: 2%; 
+        margin-left: 10px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        margin-top: 20px;
+    }
+    .flexbox-container_p{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        background-color: rgb(0, 0, 0);
+    }
+    .flexbox-item_p{
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        height: 110px;
+        background-color: rgb(138, 33, 33);
+    }
+.flexbox-container_m {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.flexbox-item_m {
+    width: 642px;
+    height: 60px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-right: -8px;
+    border: 3px solid rgb(163, 53, 53);
+    background-color:rgb(238, 49, 49);
+}

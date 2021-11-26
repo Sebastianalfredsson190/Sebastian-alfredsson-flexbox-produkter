@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="flexbox-container">
+            <div class="flexbox-item flexbox-item-1">
+                <a href="index.html">
+                    <h3>Hem</h3>
+                </a>
+            </div>
+            <div class="flexbox-item flexbox-item-2">
+                <a href="produkter.html">
+                    <h3>Produkter</h3>
+                </a>
+            </div>
+            <div class="flexbox-item flexbox-item-3">
+                <a href="kontakt.html">
+                    <h3>Kontakta oss</h3>
+                </a>
+            </div>
+            <div class="flexbox-item flexbox-item-4">
+                <a href="omoss.html">
+                    <h3>Om oss</h3>
+                </a>
+            </div>
+            <div class="flexbox-item flexbox-item-5">
+                <a href="varukorg.html">
+                    <h3>Din varukorg</h3>
+                </a>
+            </div>
+        </div>
+    </body>
+    <br>
+        <div class="flexbox-containers">
+            <div class="flexbox-logo">
+                <img src="logo.jpg" alt="" width="350" heigt="50">
+            </div>
+        </div>
+    <br>
+    <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 3</div>
+            <img src="coca-cola_vanilla_330_ml.png" width="40%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 3</div>
+            <img src="coca-cola_zero_sugar_vanilla_330_ml.png" width="40%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 3</div>
+            <img src="coca-cola_zero_sugar_330_ml.png" width="40%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    <br>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+
+      
+    <br>
+        <div class="flexbox-container_b">
+            <div class="flexbox-item_b flexbox-item_b_1">
+                <h2>
+                    Coca-Cola är en kolsyrad läskedryck med colasmak som tillverkas av The Coca-Cola Company, grundat 1886 i Atlanta, Georgia, USA. Coca-Cola säljs i olika varianter i länder över hela världen, och är ett av världens starkaste varumärken
+                </h2>
+            </div>
+        </div>
+    <br>
+        <div class="flexbox-container_c">
+            <div class="flexbox-item_c flexbox-item_c_1">
+                <h6>
+                    © The Coca-Cola Company 2020. COCA-COLA, COCA-COLA ZERO and the design of the COCA-COLA Contour Bottle are registered trade marks of The Coca-Cola Company.
+                </h5>
+            </div>
+            <div class="flexbox-item_c flexbox-item_c_2">
+                <h4>
+                      Integritetspolicy  |  Cookiepolicy  |  Kontakta oss  
+                </h4>
+            </div>
+        </div>
+       
